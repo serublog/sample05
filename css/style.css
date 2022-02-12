@@ -1,0 +1,455 @@
+@charset "UTF-8";
+/*==================================================================
+# 設定
+================================================================= */
+/* 色
+-------------------------------------------------------------*/
+/* レイアウト値
+-------------------------------------------------------------*/
+/* 階層
+-------------------------------------------------------------*/
+/* ブレークポイント
+-------------------------------------------------------------*/
+/* メディアクエリー
+-------------------------------------------------------------*/
+/*==================================================================
+# 初期化
+================================================================= */
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.6rem;
+  color: #fff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  background-color: #050507;
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+  height: auto;
+  border: none;
+}
+
+/*==================================================================
+#  補完クラス
+================================================================= */
+/* PCだけ非表示
+-------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  .hidden-pc {
+    display: none;
+  }
+}
+
+/*タブレットだけ非表示 
+-------------------------------------------------------------*/
+@media screen and (min-width: 768px) {
+  .hidden-md {
+    display: none;
+  }
+}
+
+/*スマホだけ非表示 
+-------------------------------------------------------------*/
+@media screen and (max-width: 767px) {
+  .hidden-sm {
+    display: none;
+  }
+}
+
+/* セクション
+-------------------------------------------------------------*/
+.section-title {
+  font-size: 6rem;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.section-title a {
+  text-decoration: none;
+  border-bottom: 1px solid #CCC;
+  color: #fff;
+  letter-spacing: .03em;
+  line-height: 2.08;
+}
+
+/* 共通クラス
+-------------------------------------------------------------*/
+.inner {
+  max-width: 740px;
+  margin: 0 auto;
+  padding: 0 30px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.bg {
+  background: url("../img/bg.jpg") center center repeat !important;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 10;
+}
+
+.bg.open {
+  display: block;
+}
+
+/*==================================================================
+# header
+================================================================= */
+.header__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px 30px;
+}
+
+.header__nav {
+  position: fixed;
+  top: -100%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #050507;
+  width: 100%;
+  text-align: center;
+  padding: 80px 40px 20px;
+}
+
+.header__item + .header__item {
+  margin-top: 20px;
+}
+
+.header__item-link {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.burger-btn {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 1px;
+  background-color: #fff;
+  position: absolute;
+  content: '';
+}
+
+.bar__top {
+  top: 5px;
+}
+
+.bar__mid {
+  top: 15px;
+}
+
+.bar__bottom {
+  bottom: 5px;
+}
+
+/*==================================================================
+# main
+================================================================= */
+/* mainvisual
+-------------------------------------------------------------*/
+.mainvisual {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  overflow-x: hidden;
+}
+
+.mainvisual img {
+  width: calc(100%/3);
+  height: 100vh;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* top
+-------------------------------------------------------------*/
+.top-title {
+  font-size: 10rem;
+  letter-spacing: .03em;
+  text-align: center;
+  line-height: 1.25;
+}
+
+/* information
+-------------------------------------------------------------*/
+.information {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.information__body {
+  margin-top: 30px;
+}
+
+.information__date {
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.information__date-detail {
+  font-size: 1.8rem;
+  line-height: 1.333;
+}
+
+.information-place {
+  margin-top: 20px;
+  font-size: 4rem;
+  font-weight: 700;
+}
+
+.information-detail {
+  font-size: 1.8rem;
+  line-height: 1.3333;
+}
+
+/* gallery
+-------------------------------------------------------------*/
+.gallery {
+  margin-top: 140px;
+}
+
+.gallery__list {
+  margin-top: 40px;
+}
+
+.gallery__item {
+  width: 47.972%;
+}
+
+.gallery__item + .gallery__item {
+  margin-top: 60px;
+}
+
+/* access
+-------------------------------------------------------------*/
+.access {
+  margin-bottom: 480px;
+  position: relative;
+  z-index: 20;
+}
+
+.access__inner {
+  text-align: center;
+}
+
+.access__place {
+  margin-top: 45px;
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.access__place-detail {
+  margin-top: 20px;
+  line-height: 1.45;
+}
+
+.access-detail {
+  margin-top: 20px;
+  line-height: 1.45;
+}
+
+.access__btn {
+  margin-top: 30px;
+}
+
+.access__btn a {
+  display: inline-block;
+  width: 272px;
+  height: 47px;
+  line-height: 47px;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.access__btn a:hover {
+  background-color: #050507;
+}
+
+/* contact
+-------------------------------------------------------------*/
+.contact {
+  padding-bottom: 200px;
+}
+
+.contact__inner {
+  margin-top: 45px;
+}
+
+.contact__btn {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.contact__btn a {
+  position: relative;
+  display: inline-block;
+  width: 400px;
+  height: 76px;
+  line-height: 76px;
+  border: 1px solid #fff;
+  text-align: center;
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.contact__btn a::before, .contact__btn a::after {
+  position: absolute;
+  content: '';
+  right: -30px;
+  height: 1px;
+  background-color: #fff;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.contact__btn a::before {
+  top: calc(50% - 5px);
+  width: 15px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.contact__btn a::after {
+  top: 50%;
+  width: 120px;
+}
+
+.contact__btn a:hover {
+  opacity: .7;
+  -webkit-transition: opacity .3s;
+  transition: opacity .3s;
+}
+
+.contact__btn a:hover::before, .contact__btn a:hover::after {
+  right: -50px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+/*==================================================================
+# footer
+================================================================= */
+.footer {
+  border-top: 1px solid #fff;
+  padding: 80px 30px;
+}
+
+.footer__inner {
+  max-width: 1380px;
+  margin: 0 auto;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.footer__logo {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.footer__body-place {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.footer__body__information {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.footer__content {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.footer__sns__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__sns__item + .footer__sns__item {
+  margin-left: 15px;
+}
+
+.footer__sns__item a {
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__policy {
+  font-size: 1.2rem;
+}
+
+.footer__copyright {
+  margin-left: 30px;
+  font-size: 1.2rem;
+}
+/*# sourceMappingURL=style.css.map */
