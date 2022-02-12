@@ -170,6 +170,9 @@ img {
   height: 30px;
 }
 
+.burger-btn:hover {
+  cursor: pointer;
+
 .bar {
   display: block;
   width: 30px;
